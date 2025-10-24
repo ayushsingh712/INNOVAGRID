@@ -1,1 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Quiz Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-animation"></div>
+
+    <!-- Hero/Landing Section -->
+    <section id="hero-section" class="hero-section">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>INTERATIVE QUIZ FOR TESTING GENERAL KNOWLEDGE</h1>
+                
+                <ul class="requirements-list">
+                    <li class="requirement-item">
+                        <div class="requirement-number">01</div>
+                        <div class="requirement-text">There are 10 multiple-choice questions are there.</div>
+                    </li>
+                    <li class="requirement-item">
+                        <div class="requirement-number">02</div>
+                        <div class="requirement-text">One question at a time with options</div>
+                    </li>
+                    <li class="requirement-item">
+                        <div class="requirement-number">03</div>
+                        <div class="requirement-text">Highlighting correct/incorrect answers after submission</div>
+                    </li>
+                    <li class="requirement-item">
+                        <div class="requirement-number">04</div>
+                        <div class="requirement-text">Keeping the track of score and showing result page at the end</div>
+                    </li>
+                    <li class="requirement-item">
+                        <div class="requirement-number">05</div>
+                        <div class="requirement-text">Restart Quiz button is available after Quiz</div>
+                    </li>
+                </ul>
+
+                <button class="start-btn" onclick="startQuiz()">Start Quiz Now</button>
+            </div>
+
+            <div class="hero-image">
+                <div class="image-container"></div>
+            </div>
+        </div>
+    </section>
+
+    <div class="outcome-section">
+        <h3 class="outcome-title">Expected Outcome:</h3>
+        <p class="outcome-text">A fun, interactive quiz game </p>
+    </div>
+
+    <!-- Quiz Section -->
+    <section id="quiz-section" class="quiz-section">
+        <div class="quiz-container">
+            <div class="quiz-header">
+                <h1>Knowledge Quiz</h1>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                <p class="question-counter" id="question-counter">Question 1 of 10</p>
+            </div>
+
+            <div id="question-section" class="question-section">
+                <h2 id="question-text" class="question-text"></h2>
+                <div id="options-container" class="options-container"></div>
+                <button id="next-btn" class="btn btn-next" style="display: none;">Next Question</button>
+            </div>
+
+            <div id="result-section" class="result-section" style="display: none;">
+                <div class="result-card">
+                    <h2>Quiz Complete!</h2>
+                    <div class="score-display">
+                        <div class="score-circle">
+                            <span id="final-score">0</span>
+                            <span class="score-total">/ 10</span>
+                        </div>
+                    </div>
+                    <p id="result-message" class="result-message"></p>
+                    <button id="restart-btn" class="btn btn-restart">Restart Quiz</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
 
